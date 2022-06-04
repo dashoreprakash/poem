@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+
+        }
+
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .mobile {
+            position: relative;
+
+            border-radius: 20px;
+            width: 25%;
+            height: 80%;
+            background-image: url(https://images.unsplash.com/photo-1563573143765-fb9f46ff7e45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1922&q=80);
+            background-position: top;
+            background-size: cover;
+            overflow: hidden;
+        
+             /* box-shadow:  5px 5px 10px #5a5a5a,
+             -5px -5px 10px #ffffff; */
+
+
+             box-shadow:  49px 49px 100px #5a5a5a,
+             -49px -49px 100px #ffffff;
+             
+        }
+
+        .inner {
+            border-radius: 50px 50px 0 0;
+            width: 100%;
+            height: 70%;
+            position: absolute;
+            bottom: 0;
+            background-color: rgb(58, 76, 80);
+        }
+
+        /* .imgbrunch{
+            position: absolute;
+            width: 100% ;
+            height: 100px;
+            display: flex;
+
+        } */
+        img {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+
+        }
+
+        .btn1 {
+            color: white;
+            border-radius: 60px;
+            background: blue;
+            font-size: 12px;
+            position: absolute;
+            right: 5px;
+
+            top: 30%;
+            padding: 10px 18px;
+        }
+
+        h1 {
+            padding: 20px;
+            color: white;
+            font-family: cascadia code;
+            font-size: 40px;
+        }
+
+        p {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            color: white;
+            font-family: cascadia code;
+            font-size: 15px;
+        }
+
+        .img1 {
+            position: absolute;
+            left: 15px;
+            top: 30%;
+        }
+
+        .img2 {
+            position: absolute;
+            left: 35px;
+            top: 30%;
+        }
+
+        .img3 {
+            position: absolute;
+            left: 70px;
+            top: 30%;
+        }
+
+        .img4 {
+            position: absolute;
+            left: 100px;
+            top: 30%;
+        }
+
+        h2 {
+            position: absolute;
+            left: 45%;
+            top: 32%;
+        }
+
+        .about {
+            color: white;
+            position: absolute;
+            top: 45%;
+            left: 4%;
+        }
+
+
+
+        .about>h3 {
+            font-size: 25px;
+        }
+
+
+        .about>h6 {
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+
+
+        .booking {
+
+
+
+            top: 82%;
+            border-radius: 30px 30px 0px 0px;
+            transition: cubic-bezier(0.19, 1, 0.22, 1);
+            width: 100%;
+
+            height: 90px;
+
+            position: absolute;
+
+            background-color: rgb(56, 118, 137);
+
+        }
+
+
+
+
+        .booking>h4 {
+            color: rgb(58, 76, 80);
+            margin: 20px;
+            font-size: 22px;
+
+
+
+
+        }
+
+        .booking>h3 {
+            color: rgb(58, 76, 80);
+            position: absolute;
+            top: 45px;
+            left: 20px;
+            font-size: 18px;
+
+
+
+
+
+
+
+
+        }
+        span{
+            color: white;
+            font-weight: 800;
+        }
+
+
+
+        .btn2 {
+
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 30px;
+            border-radius: 20px;
+            color: white;
+            background: blue;
+
+
+
+
+
+        }
+
+        #btn2 {
+
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 11px 42px;
+            border-radius: 20px;
+            display: none;
+            color: white;
+            background: rgb(234, 18, 18);
+            
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .overly {
+
+
+            bottom: -100%;
+            left: 0;
+
+
+            position: absolute;
+            height: 80%;
+            width: 100%;
+            background-color: rgb(56, 118, 137);
+
+            z-index: 9;
+
+
+        }
+
+        .overly h5 {
+            color: rgb(136, 133, 129);
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .overly .py {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+
+            width: 95%;
+            height: 50px;
+            background-color: rgb(136, 133, 129);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .one {
+            background-color: red;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+
+        .two {
+            position: absolute;
+            left: 25px;
+            background-color: rgba(255, 179, 0, 0.688);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .overly .py>h6 {
+            color: white;
+            margin-right: 10px;
+
+        }
+        .disclaimer{
+            overflow: hidden;
+            position: absolute;
+            top: 25%;
+            width: 95%;
+            height: 40%;
+          
+
+        }
+        .disclaimer>h6{
+            padding: 10px;
+            color: red;
+            font-size: 15px;
+
+
+        }
+        .disclaimer>h2{
+            position: absolute;
+            top: 30px;
+        
+            left: 10px;
+
+            color: white;
+            font-size: 20px;
+
+
+            
+        }
+        .disclaimer>p{
+            font-size: 13px;
+            position: absolute;
+            color: rgb(44, 29, 29);
+            top: 60px;
+            left: 10px;
+            
+        }
+        #btn3{
+            position: absolute;
+            bottom: 35px;
+            left: 18px;
+            padding: 15px 110px;
+            border-radius: 50px;
+            color: white;
+            background-color: rgba(2, 41, 72, 0.599);
+
+        }
+        /* video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+
+
+        } */
+        #top{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+
+            
+        }
+        #top>h1{
+            font-size: 110px;
+        }
+        #top-btn{
+            color: white;
+            font-family: cascadia code;
+            letter-spacing: 3px;
+            position: absolute;
+            top: 100%;
+            left: 30%;
+            padding: 15px 80px;
+            font-size: 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            background:rgba(0, 0, 0, 0.564);
+
+
+        }
+        .ri-arrow-left-s-line{
+            position: absolute;
+            top: 10px ;
+            left: 10px;
+            color: white;
+            cursor: pointer;
+
+
+
+            font-size: 20px;
+            padding: 10px;
+            /* border: 1px solid black; */
+            background-color: rgba(0, 0, 0, 0.43);
+            border-radius: 50%;
+
+        }
+        .ri-bookmark-line{
+            position: absolute;
+            color: white;
+
+            top: 10px ;
+            right: 10px;
+
+            font-size: 20px;
+            padding: 10px;
+            /* border: 1px solid black; */
+            background-color: rgba(0, 0, 0, 0.43);
+
+            border-radius: 50%;
+            cursor: pointer;
+
+
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            font-family: cascadia code;
+            letter-spacing: 1px;
+            
+        }
+        .popup{
+
+            transform: scale(0);
+            transition:cubic-bezier(0.19, 1, 0.22, 1);
+            position: absolute;
+            left: 25%;
+            top: 5%;
+
+            z-index: inherit;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 20px;
+
+        }
+        .popup>h1{
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            color: black;
+            font-size: 24px;
+        }
+        .popup>p{
+            position: absolute;
+            top: 100px;
+            left: 10px;
+            color: black;
+            font-size: 10px;
+        }
+        .popup>#popup-btn{
+            position: absolute;
+            left: 35px;
+            bottom: 5px;
+
+            padding: 8px 50px;
+            background: rgb(20, 167, 153);
+
+            border-radius: 10px;
+            color: black;
+        }
+        .ri-check-fill{
+            position: absolute;
+            color: white;
+            font-size: 15px;
+            padding: 15px;
+            background:rgb(20, 167, 153) ;
+            border-radius: 50%;
+            top: -15px;
+            left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="top">
+        <!-- <h1>WELLCOME TO THE JOURNEY</h1>
+        <button id="top-btn">Explore</button> -->
+        <!-- <video id="top-video" autoplay loop src="Lake - 67201.mp4"></video> -->
+
+
+    <!-- </div> -->
+    <div class="main">
+        <div class="mobile">
+            <i class="ri-arrow-left-s-line"></i>
+            <i class="ri-bookmark-line"></i>
+            <div class="inner">
+                <h1>Goa Trip</h1>
+                <p>
+                    imonuffer tourism present's
+                </p>
+                <div class="imgbrunch">
+                    <img class="img1"
+                        src="https://images.unsplash.com/photo-1542329769-aabef9e9b3c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
+                        alt=""><img class="img2"
+                        src="https://images.unsplash.com/photo-1542847970-584270eb111b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80"
+                        alt=""><img class="img3"
+                        src="https://images.unsplash.com/photo-1579038773867-044c48829161?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
+                        alt=""><img class="img4"
+                        src="https://images.unsplash.com/flagged/photo-1574874897534-036671407eda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1961&q=80"
+                        alt="">
+                    <h2>4.5</h2>
+                </div>
+                <button class="btn1">Check Availablity</button>
+                <div class="about">
+                    <h3>Trip Details</h3>
+                    <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam asperiores corrupti ipsa
+                        assumenda aut consequatur dolorem sunt saepe nostrum adipisci Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Eligendi qui fugiat, debitis cum inventore rerum laborum quasi
+                        enim quisquam earum. Consectetur in est porro temporibus modi? Architecto exercitationem impedit
+                        molestias?</h6>
+                </div>
+                <div class="booking">
+                    <h4>Total Cost</h4>
+                    <h3><span>$899</span>/Person</h3>
+
+                    <button class="btn2">Book Now</button>
+                    <button id="btn2" class="btn2">Cencel</button>
+
+
+
+                </div>
+                <div class="overly">
+                    <div class="popup">
+                        <i class="ri-check-fill"></i>
+                        <h1>
+                            Thank You!
+                        </h1>
+                        <p>Your Trip has been Successfully Booked,Thanks!</p>
+                        <button id="popup-btn">OK</button>
+
+
+                    </div>
+                    <h5>
+                        Payment Method
+                    </h5>
+                    <div class="py">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <h6>**** **** 2233</h6>
+                    </div>
+                    <div class="disclaimer">
+                        <h6>Insufficient Balance</h6>
+                        <h2>Disclaimer</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga reiciendis tenetur quis
+                            doloribus adipisci laborum blanditiis illo culpa, veritatis quibusdam aliquam sunt suscipit
+                            voluptates veniam harum, accusantium quos incidunt dicta.
+                        </p>
+
+
+                    </div>
+                    <button id="btn3">
+                        Confirm Booking
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="d2.js"></script>
+
+
+</body>
+
+</html>
